@@ -1,0 +1,226 @@
+:root {
+    --color-background: #FFFFFF;
+    --color-background-rose: #FAFAFA;
+    --color-background_top-rose: #F1E4E6;
+    --color-black: #000000;
+    --color-text-rose: #F16D7F;
+    --color-grey: #E8E8E8;
+    --color-dark-grey: #222222;
+    --color-products-text-grey: #9F9F9F;
+    --color-products-text-light-grey: #5D5D5D;
+    --color-products-background: #F8F8F8;
+    --color-button-text: #F26376;
+    --color-button-border: #FF6A6A;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
+.header {
+    /* max-width: 1600px; */
+    min-height: 75px;
+    background-color: var(--color-dark-grey);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo {
+    display: flex;
+    align-items: center;
+    gap: 41px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+}
+
+.sec_top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: var(--color-background_top-rose);
+    padding-left: calc(50% - 800px);
+    padding-right: calc(50% - 800px);
+}
+
+.rose_border {
+    border-left: 12px solid var(--color-text-rose);
+    padding-left: 16px;
+}
+
+.text_top {
+    padding-left: 64px;
+}
+
+.title_top {
+    font-style: normal;
+    color: var(--color-dark-grey);
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.text_color_rose {
+    color: var(--color-text-rose);
+}
+
+.p_top {
+    font-style: normal;
+    color: var(--color-dark-grey);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.sec_offer {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 64px;
+    padding-bottom: 96px;
+}
+
+.offer_block {
+    position: relative;
+}
+
+.offer_text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.large_block {
+    min-height: 180px;
+    grid-column: 1 / -1;
+}
+
+.p_offer {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-background);
+}
+
+.title_offer {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: var(--color-text-rose);
+}
+
+.sec_products {
+    padding-bottom: 48px;
+}
+
+.sec_products_head {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: var(--color-dark-grey);
+}
+
+.sec_products_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin-top: 6px;
+    color: var(--color-products-text-grey);
+}
+
+.product_blocks {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);
+    justify-content: center;
+    gap: 30px;
+}
+
+.product {
+    position: relative;
+}
+
+.product_text {
+    background: var(--color-products-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -4px;
+    padding: 24px 16px;
+    gap: 16px;
+}
+
+.title_product {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--color-black);
+}
+
+.p_product {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color-products-text-light-grey);
+}
+
+.product_price {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-text-rose);
+}
+
+.button {
+    width: 212px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: var(--color-background);
+    color: var(--color-button-text);
+    border: 1px solid var(--color-button-border);
+}
+
+.browse_all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
