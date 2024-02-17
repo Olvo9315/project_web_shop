@@ -74,6 +74,7 @@ body {
 .img_top {
     max-width: 50%;
 }
+
 .rose_border {
     border-left: 12px solid var(--color-text-rose);
     padding-left: 16px;
@@ -291,4 +292,48 @@ body {
         grid-template-columns: repeat(auto-fit, 360px);
         gap: 16px;
     }
+}
+
+@media (max-width: 767px) {
+
+    .login_icon {
+        display: none;
+    }
+    .cart_icon {
+        display: none;
+    }
+    
+    .img_top {
+        display: none;
+    }
+
+    .sec_top {
+        height: 363px;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text_top {
+        padding: 0;
+    }
+
+    .title_top {
+        font-size: 38px;
+        line-height: 1;
+    }
+    .p_top{
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .rose_border {
+        width: 236px;
+    }
+
+    .sec_offer {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+
 }
