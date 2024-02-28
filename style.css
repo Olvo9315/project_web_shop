@@ -24,6 +24,12 @@ a {
     padding: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
 img {
     max-width: 100%;
 }
@@ -363,6 +369,7 @@ body {
     color: var(--color-dark-grey);
     font-size: 14px;
     padding-left: 16px;
+    padding-right: 16px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     margin-right: -4px;
@@ -416,6 +423,51 @@ body {
     fill: #FFFFFF;
 }
 
+.custom_b_btn {
+    padding: 0;
+}
+
+.custom_width_1 {
+    width: 100vw;
+    position: relative;
+}
+
+.custom_dropdown {
+    border-radius: 0;
+    min-width: 232px;
+    position: absolute;
+    right: 0;
+    top: 22px;
+    background-color: var(--color-background);
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+}
+
+.b_menu_left {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.b_menu_double {
+    color: var(--color-button-text);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.b_menu_list {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+
 @media (max-width: 1024px) {
     .center {
         padding-left: 16px;
@@ -450,7 +502,7 @@ body {
     .sec_subscribe {
         flex-direction: column;
         padding: 64px 0;
-        gap: 48px
+        gap: 48px;
     }
 
 }
