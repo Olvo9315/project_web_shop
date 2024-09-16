@@ -104,7 +104,7 @@
             <h2 class="sec_products_head">Fetured Items</h2>
             <p class="sec_products_text">Shop for items based on what we featured in this week</p>
             <div class="product_blocks">
-                <div class="product">
+                <!-- /*до шаблонизации*/ <div class="product">
                     <img class="product_img" src="img/products/prod1.jpg" alt="image">
                     <div class="product_text">
                         <h3 class="title_product">ELLERY X M'O CAPSULE</h3>
@@ -187,7 +187,7 @@
                     <a href="#" class="add_to_cart" onclick="addToCart()">
                         <img class="img_add_to_cart" src="img/products/Addtocart.png" alt="add to cart">
                     </a>
-                </div>
+                </div> /*до шаблонизации*/ --> 
             </div>
         </section>
         <div class="browse_all">
@@ -277,7 +277,7 @@
 
         let itemCount = 0;
 
-        function addToCart () {
+        function addToCart() {
             itemCount++;
             cartCounter.innerText = itemCount;
             if (itemCount > 0) {
@@ -286,6 +286,62 @@
             console.log("¡Added to cart!");
         };
 
+    </script>
+
+    <script src="data.js"></script>
+
+    <script>
+        const cardContainer = document.querySelector('.product_blocks');
+
+        function createProductCard(product) {
+            const card = document.createElement('div');
+            card.classList.add('product');
+
+            const cardImg = document.createElement('img');
+            cardImg.classList.add('product_img');
+            cardImg.src = product.image;
+            cardImg.alt = product.title;
+
+            const cardText = document.createElement('div');
+            cardText.classList.add('product_text');
+
+            const cardTitle = document.createElement('h3');
+            cardTitle.classList.add('title_product');
+            cardTitle.textContent = product.title;
+
+            const cardDescription = document.createElement('p');
+            cardDescription.classList.add('p_product');
+            cardDescription.textContent = product.description;
+
+            const cardPrice = document.createElement('p');
+            cardPrice.classList.add('product_price');
+            cardPrice.textContent = product.price;
+
+            const addToCartLink = document.createElement('a');
+            addToCartLink.classList.add('add_to_cart');
+            addToCartLink.href = "#";
+            addToCartLink.onclick = () => addToCart();
+
+            const addToCartImg = document.createElement('img');
+            addToCartImg.classList.add('img_add_to_cart');
+            addToCartImg.src = product.addToCartImage;
+            addToCartImg.alt = 'add to cart';
+
+            card.appendChild(cardImg);
+            card.appendChild(cardText);
+            cardText.appendChild(cardTitle);
+            cardText.appendChild(cardDescription);
+            cardText.appendChild(cardPrice);
+            addToCartLink.appendChild(addToCartImg);
+            card.appendChild(addToCartLink);
+
+            return card;
+        }
+
+        productData.forEach(product => {
+            const card = createProductCard(product);
+            cardContainer.appendChild(card);
+        });
     </script>
 </body>
 
